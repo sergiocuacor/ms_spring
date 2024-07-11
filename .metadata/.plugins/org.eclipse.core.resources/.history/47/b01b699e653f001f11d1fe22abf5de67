@@ -1,0 +1,22 @@
+package com.springbootapp.item.models.service;
+
+import java.util.List;
+
+import com.springbootapp.item.clientes.ProductoClienteRest;
+import com.springbootapp.item.models.Producto;
+
+public class ItemServiceFeign implements ProductoClienteRest {
+
+	@Override
+	public List<Producto> listar() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Producto listarPorId(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

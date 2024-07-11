@@ -1,0 +1,5 @@
+package com.springbootapp.item.models;
+
+public class Item {
+
+}

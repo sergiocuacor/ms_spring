@@ -1,0 +1,2 @@
+spring.application.name=Productos
+server.port=8001
