@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: Productos
+          uri: lb://Productos # El nombre del microservicio
+          predicates:
+            - Path=/api/productos/**
+          filters:
+            - StripPrefix=2
+        - id: Item
+          uri: lb://Item # El nombre del microservicio
+          predicates:
+            - Path=/api/items/**
+          filters:
+            - StripPrefix=2

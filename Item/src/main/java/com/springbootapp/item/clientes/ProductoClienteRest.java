@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.springbootapp.item.models.Producto;
 
-@FeignClient(name = "Productos", url = "localhost:8001") // Ponemos el nombre del microservicio con el que nos queremos
+@FeignClient(name = "Productos") // Ponemos el nombre del microservicio con el que nos queremos
 															// comunicar(fijarnos en su application.properties)
 public interface ProductoClienteRest {
 

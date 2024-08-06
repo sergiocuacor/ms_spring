@@ -1,8 +1,0 @@
-package com.springbootapp.item.clientes;
-
-import org.springframework.cloud.openfeign.FeignClient;
-
-@FeignClient(name = "Productos", url="localhost:8001") // Ponemos el nombre del microservicio con el que nos queremos comunicar(fijarnos en su application.properties)
-public interface ProductoClienteRest {
-
-}

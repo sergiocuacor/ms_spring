@@ -8,6 +8,19 @@ public class Producto {
 	private String nombre;
 	private Double precio;
 	private Date createdAt;
+	
+	
+	
+	public Producto() {
+		super();
+	}
+	public Producto(Long id, String nombre, Double precio, Date createdAt) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.precio = precio;
+		this.createdAt = createdAt;
+	}
 	public Long getId() {
 		return id;
 	}

@@ -1,6 +1,7 @@
 package com.springbootapp.productos.controllers;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,7 +26,18 @@ public class ProductoController {
 	}
 	
 	@GetMapping("/listar/{id}")
-	public Producto listarPorId(@PathVariable Long id) {
+	public Producto listarPorId(@PathVariable Long id) throws InterruptedException {
+		
+		if(id.equals(10L)) {
+			throw new IllegalStateException("Producto no encontrado");
+		}
+		if(id.equals(7L)) {
+			TimeUnit.SECONDS.sleep(5L);
+		}
+		if(id.equals(5L)) {
+			TimeUnit.SECONDS.sleep(3L);
+		}
+		
 		return productoService.findById(id);
 	}
 	
